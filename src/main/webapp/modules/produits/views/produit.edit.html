@@ -1,0 +1,47 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClientLabel">Edit a Produit</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group">
+            <label class="control-label" for="field_lastName"> Nom du produit : </label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                   ng-model="vm.produit.nomProduit"   />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_firstName">Prix :</label>
+            <input type="float" class="form-control" name="firstName" id="field_firstName"
+                   ng-model="vm.produit.prix"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_firstName">ImageURL :</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                   ng-model="vm.produit.imageURL"/>
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_firstName">Description :</label>
+            <input type="text" class="form-control" name="firstName" id="field_firstName"
+                   ng-model="vm.produit.description"/>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label" for="field_catProduit">Nom catégorie Produit: </label>
+            <select name="catProduit" id="idCatProduit" class="form-control" ng-model="vm.produit.catProduit" ng-options="catProduit as catProduit.nomCatProduit for catProduit in catProduits" required="true" >
+                <option value="">Veuillez sélectionner une catégorie </option>      
+            </select>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+                <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+            </button>
+            <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"></span>&nbsp;<span>update</span>
+            </button>
+        </div>
+</form>

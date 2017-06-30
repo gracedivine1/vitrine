@@ -1,0 +1,93 @@
+@import url(animate.css);
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Quicksand', 'Helvetica Neue',Helvetica,Arial, sans-serif;
+  font-size: 16px;
+  background: #E7E7E7;
+}
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+.pos{
+	margin-left: 40%;
+	margin-right: 40%;
+}
+.filtre{
+    margin-bottom: 10px;
+}
+.frame{
+	margin-left: 35%;
+	margin-right: 35%;
+}
+h3{
+	font-family: 'Quicksand', 'Helvetica Neue',Helvetica,Arial, sans-serif;
+  font-size: 16px;
+}
+.control-label{
+	display: inline important;
+}
+.tabAnim{
+    width: 83.5%;
+    position: fixed;
+  -webkit-animation-name: bounceIn;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: bounceIn;
+  -moz-animation-fill-mode: both;
+  -moz-animation-duration: 1s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-timing-function: linear;
+  animation-name: bounceIn;
+  animation-fill-mode: both;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+.img:hover{
+    -webkit-filter:none;
+    -webkit-transform: scale(7);
+    -webkit-transition:1s;
+    -moz-filter:none;
+    -moz-transform: scale(7);
+    -moz-transition: 1s;
+/*    box-shadow: 0 0 10px black;*/
+
+
+
+}
+.container {
+      margin-top:50px
+  }
+
+
+/* Déterminer la durée de l'animation
+.my-element.ng-enter, .my-element.ng-leave{
+        -webkit-animation-duration: 0.5s;
+        animation-duration: 0.5s;
+}
+
+Début de l'animation - apparition de l'élément
+.my-element.ng-enter{
+        opacity: 0;
+        transform: translateX(100px);
+        -webkit-transform: translateX(100px);
+}
+
+Fin de l'animation - apparition de l'élément
+.my-element.ng-enter-active{
+        opacity: 1;
+        transform: translateX(0px);
+        -webkit-transform: translateX(0px);
+}
+*/

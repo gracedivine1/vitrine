@@ -1,0 +1,39 @@
+<div class="panel-body well tabAnim">
+    <table class="table table-striped table-bordered table-hover table-condensed">
+        <caption class="text-center">Panier Table </caption>
+        <thead>
+            <tr>
+                <th class="text-center">ID</th>
+                <th class="text-center">Quantité</th>
+                <th class="text-center">prix Unitaire</th>
+
+            </tr>
+        </thead><!--
+-->        <tbody>
+            <tr ng-repeat="item in vm.paniers">
+                <td class="text-center">{{item.id}}</td>
+                <td class="text-center">{{item.quantite}}</td>
+                <td class="text-center">{{item.prixUnitaire}}</td>
+
+                <td class="text-center">
+                    <button  class="btn btn-xs btn-primary btn-danger"
+                             ui-sref="panier.delete({id:item.id})">
+                        <i  class="glyphicon glyphicon-trash"></i>
+                        Delete
+                    </button>
+                    <button  class="btn btn-xs btn-primary" ui-sref="panier.edit({id:item.id})"><i class="glyphicon glyphicon-edit"></i>
+                        Edit
+                    </button>
+                    <button  class="btn btn-xs btn-primary" ui-sref="panier.detail({id:item.id})"><i class="glyphicon glyphicon-print"></i>
+                        detail
+                    </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button class="btn btn-success" ng-click="downloadCSV()"><i class="glyphicon glyphicon-export"></i>ExportTable</button>
+        <button class="btn btn-primary" ng-click="fetchAllClients()"><i class="glyphicon glyphicon-refresh"> </i>Refresh</button>
+        <a ui-sref="panier.new" class="btn btn-primary"><i class="glyphicon glyphicon-plus"> </i>New</a>
+    </div>
+</div>

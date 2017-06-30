@@ -1,0 +1,38 @@
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myClientLabel">Edit a Commande</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="form-group">
+            <label class="control-label" for="field_lastName"> Date: </label>
+            <input type="text" class="form-control" name="lastName" id="field_lastName"
+                   ng-model="vm.commande.date"   />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_firstName">Statut :</label>
+            <input type="float" class="form-control" name="firstName" id="field_firstName"
+                   ng-model="vm.commande.statut"/>
+        </div>
+       
+
+        <div class="form-group">
+            <label class="control-label" for="field_catCommande">Artisan: </label>
+            <select name="artisant" id="idartisant" class="form-control" ng-model="vm.commande.artisant" ng-options="artisant as artisant.nom for artisant in artisant" required="true" >
+                <option value="">Veuillez sélectionner un Artisant </option>      
+            </select>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+                <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+            </button>
+            <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+                <span class="glyphicon glyphicon-save"></span>&nbsp;<span>update</span>
+            </button>
+        </div>
+</form>
