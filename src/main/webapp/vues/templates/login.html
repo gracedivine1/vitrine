@@ -1,0 +1,8 @@
+<form ng-submit="loginUser(signinform)" name="signinform" novalidate>
+    <imput type="text" required ng-model="username" placeholder="nickName">&nbsp;  
+    <imput type="password" required ng-model="userpassword" ng-model="user.password" placeholder="password">  
+    <button type="submit" ng-disabled="!signinform.$valid" translate> 
+                CONNECT
+    </button> 
+
+</form>

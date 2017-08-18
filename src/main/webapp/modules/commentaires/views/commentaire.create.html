@@ -12,28 +12,30 @@
             <input type="text" class="form-control" id="id" name="id"
                    ng-model="vm.commentaire.id" readonly />
         </div>
-        <div class="form-group">
-            <label class="control-label" for="field_commCom">Commentaire: </label>
-            <input type="text" class="form-control" name="commCom" id="field_commCom"
-                   ng-model="vm.commentaire.commCom"
-                   />
-        </div>
+
         <div class="form-group">
             <label class="control-label" for="field_produit">Nom Produit: </label>
             <select name="produit" id="idProduit" class="form-control" ng-model="vm.commentaire.produit" ng-options="produit as produit.nomProduit for produit in produits" required="true" >
                 <option value="">Veuillez sélectionner un produit </option>      
             </select>
-                   
+
         </div>
+        <div class="form-group">
+            <label class="control-label" for="field_commCom">Commentaire: </label>
+            <textarea rows="3" class="form-control" name="commCom" id="field_commCom"
+                      ng-model="vm.commentaire.commCom" ></textarea>
+        </div>
+
 
 
     </div>
     <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
             <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+         
         </button>
         <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
-            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+             <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Save</span>
         </button>
     </div>
 </form>

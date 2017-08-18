@@ -65,6 +65,7 @@
                                             numTel: null,
                                             email: null,
                                             ville: null,
+                                            sexe: null,
                                             image: null
                                         };
                                     }

@@ -11,81 +11,194 @@
     </head>
 
     <body ng-app="vitrine">
+        <div class="span12">
+            <header class="page-header">
+                <div class="entete1">
+                    <section class="row">
+                        <div class="span9">
+                            <div class="col-lg-3"><img class=img-responsive src="images/logos/logo6.jpg" alt="FLeure"></div>
+                            <div class="col-lg-9">
+
+                                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner" role="listbox">
+                                        <div class="item active">
+                                            <img src="images/baniere/i1.jpg" alt="First slide">
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/baniere/i2.jpg" alt="Second slide">
+                                        </div>
+                                        <div class="item">
+                                            <img src="images/baniere/i3.jpg" alt="Third slide">
+                                        </div>
+                                    </div>
+                                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                        <span class="sr-only">Previous</span>
+                                    </a>
+                                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                        <span class="sr-only">Next</span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>  
+                    </section>
+                </div>
 
 
-        <div class="">
-            <div class="container" ui-view="moduleContent"></div>
+
+
+
+                <div class="row" >
+                    <div class="span3" >
+                        <nav class="navbar navbar-default">
+                            <div class="container">
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                    <a class="navbar-brand" href="#">Vitrine artisanale</a>
+                                </div>
+
+                                <div class=" col-lg-9 navbar-collapse collapse">
+                                    <ul class="nav navbar-nav">
+                                        <li class="active"><a href="#">Home</a></li>
+                                        <li><a href="#about">A propos</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                        <li class="dropdown">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                            <ul class="dropdown-menu">
+                                                <li><a href="#">Action</a></li>
+                                                <li><a href="#">Another action</a></li>
+                                                <li><a href="#">Something else here</a></li>
+                                                <li role="separator" class="divider"></li>
+                                                <li class="dropdown-header">Nav header</li>
+                                                <li><a href="#">Separated link</a></li>
+                                                <li><a href="#">One more separated link</a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+
+
+                                    <form class="col-lg-3 navbar-form navbar-left" role="search">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Chercher un produit ou une catégorie">
+                                        </div>
+                                        <button type="submit" class="btn btn-default">Chercher</button>
+                                    </form>
+                                </div><!--/.nav-collapse -->   
+                        </nav>
+                    </div>      
+                </div>
+            </header>
+
+
+            <div class="container">
+                <div class="container" ui-view="moduleContent"></div>
+            </div> 
+            <!--        <div class="row">
+                        <div class="col-lg-3"></div>
+                        <div class="col-lg-6">
+                            <div class="container" ui-view="moduleContent"></div>
+            
+                          
+            
+                        </div>
+                        <div class="col-lg-3"></div>  -->
+
+
+
+
+            <script src="lib/jquery.js" type="text/javascript"></script>
+            <script src="lib/angular.js" type="text/javascript"></script>
+            <script src="lib/bootstrap.min.js" type="text/javascript"></script>
+            <script src="lib/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+            <script src="lib/angular-aria.min.js" type="text/javascript"></script>
+            <script src="lib/angular-translate.js" type="text/javascript"></script>
+            <script src="lib/angular-route.min.js" type="text/javascript"></script>
+            <script src="lib/angular-resource.min.js" type="text/javascript"></script>
+            <script src="lib/angular-animate.min.js" type="text/javascript"></script>
+            <script src="lib/angular-ui-router.js" type="text/javascript"></script>
+
+
+
+            <!--        <script src="js/app.state.js" type="text/javascript"></script>
+                    <script src="js/services/app.services.js" type="text/javascript"></script>
+                    <script src="js/controllers/app.controllers.js" type="text/javascript"></script>-->
+
+            <script src="js/app.state.js" type="text/javascript"></script>
+
+            <script type="text/javascript" src="modules/admins/admin.state.js"></script>
+            <script type="text/javascript" src="modules/admins/js/admin.services.js"></script>
+            <script type="text/javascript" src="modules/admins/js/admin.controllers.js"></script>
+
+
+            <script type="text/javascript" src="modules/artisans/artisan.state.js"></script>
+            <script type="text/javascript" src="modules/artisans/js/artisan.services.js"></script>
+            <script type="text/javascript" src="modules/artisans/js/artisan.controllers.js"></script>
+            <!--            <script src="modules/admins/directives/directives.js" type="text/javascript"></script>-->
+
+            <script type="text/javascript" src="modules/catArts/catArt.state.js"></script>
+            <script type="text/javascript" src="modules/catArts/js/catArt.services.js"></script>
+            <script type="text/javascript" src="modules/catArts/js/catArt.controllers.js"></script> 
+
+            <script src="modules/produits/produit.state.js" type="text/javascript"></script>
+            <script src="modules/produits/js/produit.services.js" type="text/javascript"></script>
+            <script src="modules/produits/js/produit.controllers.js" type="text/javascript"></script> 
+
+            <script src="modules/catProduits/catProduit.state.js" type="text/javascript"></script>
+            <script src="modules/catProduits/js/catProduit.services.js" type="text/javascript"></script>
+            <script src="modules/catProduits/js/catProduit.controllers.js" type="text/javascript"></script>
+
+            <script src="modules/clients/client.state.js" type="text/javascript"></script>
+            <script src="modules/clients/js/client.services.js" type="text/javascript"></script>
+            <script src="modules/clients/js/client.controllers.js" type="text/javascript"></script>
+
+            <script src="modules/commandes/commande.state.js" type="text/javascript"></script>
+            <script src="modules/commandes/js/commande.services.js" type="text/javascript"></script>
+            <script src="modules/commandes/js/commande.controllers.js" type="text/javascript"></script>
+
+            <script src="modules/commentaires/commentaire.state.js" type="text/javascript"></script>
+            <script src="modules/commentaires/js/commentaire.services.js" type="text/javascript"></script>
+            <script src="modules/commentaires/js/commentaire.controllers.js" type="text/javascript"></script>
+
+            <script src="modules/comptes/compte.state.js" type="text/javascript"></script>
+            <script src="modules/comptes/js/compte.services.js" type="text/javascript"></script>
+            <script src="modules/comptes/js/compte.controllers.js" type="text/javascript"></script>
+
+            <script src="modules/sousCatArts/sousCatArt.state.js" type="text/javascript"></script>
+            <script src="modules/sousCatArts/js/sousCatArt.services.js" type="text/javascript"></script>
+            <script src="modules/sousCatArts/js/sousCatArt.controllers.js" type="text/javascript"></script> 
+
+            <script src="modules/paniers/panier.state.js" type="text/javascript"></script>
+            <script src="modules/paniers/js/panier.services.js" type="text/javascript"></script>
+            <script src="modules/paniers/js/panier.controllers.js" type="text/javascript"></script>
+
+
+            <script type="text/javascript" src="modules/module.state.js"></script>
+
+
         </div>
 
 
-        <script src="lib/jquery.js" type="text/javascript"></script>
-        <script src="lib/angular.js" type="text/javascript"></script>
-        <script src="lib/bootstrap.min.js" type="text/javascript"></script>
-        <script src="lib/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
-        <script src="lib/angular-aria.min.js" type="text/javascript"></script>
-        <script src="lib/angular-translate.js" type="text/javascript"></script>
-        <script src="lib/angular-route.min.js" type="text/javascript"></script>
-        <script src="lib/angular-resource.min.js" type="text/javascript"></script>
-        <script src="lib/angular-animate.min.js" type="text/javascript"></script>
-        <script src="lib/angular-ui-router.js" type="text/javascript"></script>
 
 
-
-        <!--        <script src="js/app.state.js" type="text/javascript"></script>
-                <script src="js/services/app.services.js" type="text/javascript"></script>
-                <script src="js/controllers/app.controllers.js" type="text/javascript"></script>-->
-
-        <script src="js/app.state.js" type="text/javascript"></script>
-
-        <script type="text/javascript" src="modules/admins/admin.state.js"></script>
-        <script type="text/javascript" src="modules/admins/js/admin.services.js"></script>
-        <script type="text/javascript" src="modules/admins/js/admin.controllers.js"></script>
-
-
-        <script type="text/javascript" src="modules/artisans/artisan.state.js"></script>
-        <script type="text/javascript" src="modules/artisans/js/artisan.services.js"></script>
-        <script type="text/javascript" src="modules/artisans/js/artisan.controllers.js"></script>
-        <!--            <script src="modules/admins/directives/directives.js" type="text/javascript"></script>-->
-
-        <script type="text/javascript" src="modules/catArts/catArt.state.js"></script>
-        <script type="text/javascript" src="modules/catArts/js/catArt.services.js"></script>
-        <script type="text/javascript" src="modules/catArts/js/catArt.controllers.js"></script> 
-        
-        <script src="modules/produits/produit.state.js" type="text/javascript"></script>
-        <script src="modules/produits/js/produit.services.js" type="text/javascript"></script>
-        <script src="modules/produits/js/produit.controllers.js" type="text/javascript"></script> 
-
-        <script src="modules/catProduits/catProduit.state.js" type="text/javascript"></script>
-        <script src="modules/catProduits/js/catProduit.services.js" type="text/javascript"></script>
-        <script src="modules/catProduits/js/catProduit.controllers.js" type="text/javascript"></script>
-
-        <script src="modules/clients/client.state.js" type="text/javascript"></script>
-        <script src="modules/clients/js/client.services.js" type="text/javascript"></script>
-        <script src="modules/clients/js/client.controllers.js" type="text/javascript"></script>
-
-        <script src="modules/commandes/commande.state.js" type="text/javascript"></script>
-        <script src="modules/commandes/js/commande.services.js" type="text/javascript"></script>
-        <script src="modules/commandes/js/commande.controllers.js" type="text/javascript"></script>
-
-        <script src="modules/commentaires/commentaire.state.js" type="text/javascript"></script>
-        <script src="modules/commentaires/js/commentaire.services.js" type="text/javascript"></script>
-        <script src="modules/commentaires/js/commentaire.controllers.js" type="text/javascript"></script>
-
-        <script src="modules/comptes/compte.state.js" type="text/javascript"></script>
-        <script src="modules/comptes/js/compte.services.js" type="text/javascript"></script>
-        <script src="modules/comptes/js/compte.controllers.js" type="text/javascript"></script>
-
-        <script src="modules/sousCatArts/sousCatArt.state.js" type="text/javascript"></script>
-        <script src="modules/sousCatArts/js/sousCatArt.services.js" type="text/javascript"></script>
-        <script src="modules/sousCatArts/js/sousCatArt.controllers.js" type="text/javascript"></script> 
-        
-        <script src="modules/paniers/panier.state.js" type="text/javascript"></script>
-        <script src="modules/paniers/js/panier.services.js" type="text/javascript"></script>
-        <script src="modules/paniers/js/panier.controllers.js" type="text/javascript"></script>
-        
-        
-        <script type="text/javascript" src="modules/module.state.js"></script>
+        <!-- Footer -->
+        <section>
+           <div ng-include src="'/vues/templates/footer.html'" id="footer"></div>
+        </section>
 
 
     </body>
+
 </html>

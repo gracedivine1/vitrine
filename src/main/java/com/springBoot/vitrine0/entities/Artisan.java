@@ -36,8 +36,8 @@ public class Artisan extends Personne {
         super();
     }
 
-    public Artisan(SousCatArt sousCatArt, String nom, String prenom, String login, String motPasse, String email, String numTel, String ville) {
-        super(nom, prenom, login, motPasse, email, numTel, ville);
+    public Artisan(SousCatArt sousCatArt, String nom, String prenom, String login, String motPasse, String email, String numTel, String ville,String sexe) {
+        super(nom, prenom, login, motPasse, email, numTel, ville,sexe);
         this.sousCatArt = sousCatArt;
     }
 

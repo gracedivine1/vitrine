@@ -5,7 +5,6 @@
  */
 package com.springBoot.vitrine0.entities;
 
-
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Column;
@@ -25,50 +24,53 @@ import javax.persistence.OneToOne;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
-public abstract  class Personne implements Serializable {
-    @Id @GeneratedValue(strategy = GenerationType.AUTO)
+public abstract class Personne implements Serializable {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    
+
     @Column
     private String nom;
-    
+
     @Column
     private String prenom;
-    
+
     @Column(nullable = false, unique = true)
     private String login;
-    
+
     @Column(nullable = false)
     private String motPasse;
-    
+
     @Column
     private String email;
-    
+
     @Column
     private String numTel;
-    
+
     @Column
     private String ville;
-    
+
     @Column
     private String image;
-    
+
+    @Column
+    private String sexe;
+
     @OneToOne(mappedBy = "personne")
     private Compte compte;
 
-    
     @OneToMany(mappedBy = "personne", fetch = FetchType.LAZY)
     private Collection<Commande> commandes;
-    
+
     @OneToMany(mappedBy = "personne", fetch = FetchType.LAZY)
     private Collection<Commentaire> commentaires;
-    
-    //Constructeurs
 
+    //Constructeurs
     public Personne() {
     }
 
-    public Personne(String nom, String prenom, String login, String motPasse, String email, String numTel, String ville) {
+    public Personne(String nom, String prenom, String login, String motPasse, String email, String numTel, String ville, String sexe) {
         this.nom = nom;
         this.prenom = prenom;
         this.login = login;
@@ -76,6 +78,7 @@ public abstract  class Personne implements Serializable {
         this.email = email;
         this.numTel = numTel;
         this.ville = ville;
+        this.sexe = sexe;
     }
 
     public Compte getCompte() {
@@ -85,9 +88,6 @@ public abstract  class Personne implements Serializable {
     public void setCompte(Compte compte) {
         this.compte = compte;
     }
-
-
-    
 
     public Long getId() {
         return id;
@@ -161,6 +161,14 @@ public abstract  class Personne implements Serializable {
         this.image = image;
     }
 
+    public String getSexe() {
+        return sexe;
+    }
+
+    public void setSexe(String sexe) {
+        this.sexe = sexe;
+    }
+
     public Collection<Commande> getCommandes() {
         return commandes;
     }
@@ -171,9 +179,7 @@ public abstract  class Personne implements Serializable {
 
     @Override
     public String toString() {
-        return "Personne{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", login=" + login + ", motPasse=" + motPasse + ", email=" + email + ", numTel=" + numTel + ", ville=" + ville + ", image=" + image + ", commandes=" + commandes + '}';
+        return "Personne{" + "id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", login=" + login + ", motPasse=" + motPasse + ", email=" + email + ", numTel=" + numTel + ", ville=" + ville + ", image=" + image + ", sexe=" + sexe + ", commandes=" + commandes + '}';
     }
 
-
-    
 }

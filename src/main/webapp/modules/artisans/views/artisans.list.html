@@ -1,34 +1,62 @@
-<div class="panel-body well tabAnim">
+<div class="row"></div>  <!--première ligne vide-->
+
+<div class="row"><!--Formulaire de r2cherche des artisans-->
+
+    <form class="col-lg-12 navbar-form navbar-left" role="search">
+        <div class="form-group">
+            <input type="text" ng-model="query" class="form-control" placeholder="Chercher un artisan">
+        </div>
+        <button type="submit" class="btn btn-default">Chercher</button>
+    </form>     
+</div> 
+
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <div class=" panel-body well col-md-3 col-sm-6"  ng-repeat="item in vm.artisans|filter:query">
+
+        <div class="thumbnail">
+            <img src="{{item.imageURL}}" alt="..."  class="img-thumbnail">
+            <div class="caption">
+                <a><h3>{{item.nom}} {{item.prenom}}</h3></a>
+                <p>{{item.description}}.</p>
+                <p>{{item.ville}}.</p>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-1"></div>
+
+
+
+<!--<div class="panel-body well tabAnim">
     <table class="table table-striped table-bordered table-hover table-condensed">
-        <caption class="text-center">Artisan Table </caption>
+        <caption class="text-center">Table des artisans  </caption>
         <thead>
             <tr>
-                <th class="text-center">ID</th>
+                <th class="text-center">#</th>
                 <th class="text-center">Nom</th>
-                <th class="text-center">PRENOM</th>
-                <th class="text-center">LOGIN</th>
-                <!--                <th class="text-center">MOT DE PASSE</th>-->
+                <th class="text-center">Prénom</th>
+                <th class="text-center">Login</th>
                 <th class="text-center">Email</th>
                 <th class="text-center">Sous catégorie</th>
-                
-                <!--                <th class="text-center">Telephone</th>-->
-                <th class="text-center">VILLE</th>
-                <!--                <th class="text-center">PHOTO</th>-->
+                <th class="text-center">Ville</th>
+                                <th class="text-center">PHOTO</th>
                 <th></th>
             </tr>
-        </thead><!--
-        -->        <tbody>
+        </thead>
+                <tbody>
             <tr ng-repeat="item in vm.artisans">
                 <td class="text-center">{{item.id}}</td>
                 <td class="text-center">{{item.nom}}</td>
                 <td class="text-center">{{item.prenom}}</td>
                 <td class="text-center">{{item.login}}</td>
-                <!--                <td class="text-center">{{item.motPasse}}</td>-->
+                                <td class="text-center">{{item.motPasse}}</td>
                 <td class="text-center">{{item.email}}</td>
                 <td class="text-center">{{item.sousCatArt.nomSousCatArt}}</td>
-                <!--                <td class="text-center">{{item.numTel}}</td>-->
+                                <td class="text-center">{{item.numTel}}</td>
                 <td class="text-center">{{item.ville}}</td>
-                <!--                <td class="text-center">{{item.image}}</td>-->
+                                <td class="text-center">{{item.image}}</td>
                 <td class="text-center">
                     <button  class="btn btn-xs btn-primary btn-danger"
                              ui-sref="artisan.delete({id:item.id})">
@@ -50,4 +78,4 @@
         <button class="btn btn-primary" ng-click="fetchAllClients()"><i class="glyphicon glyphicon-refresh"> </i>Refresh</button>
         <a ui-sref="artisan.new" class="btn btn-primary"><i class="glyphicon glyphicon-plus"> </i>New</a>
     </div>
-</div>
+</div>-->

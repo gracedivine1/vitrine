@@ -66,6 +66,7 @@
                                             email: null,
                                             ville: null,
                                             sousCatArt: null,
+                                            sexe: null,
                                             image: null
                                         };
                                     }
